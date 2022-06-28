@@ -1,0 +1,39 @@
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: auto;
+    width: 500px;
+    box-shadow: 3px 3px 10px rgba(131, 131, 131, 0.411);
+    border-style: dashed;
+    border-color: rgba(0, 0, 0, 0.596);
+    border-width: 2px;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  header {
+    color: white;
+    text-align: center;
+  }
+  
+  #txtb {
+    text-align: center;
+  }
+  #res {
+    text-align: center;
+  }
+  body {
+    background-image: url(36fda417914eaecf895feae4a8913e57.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #bnb {
+    text-align: center;
+  }
+  #cmr {
+    color: white;
+  }
+  

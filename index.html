@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corretora de investimentos</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="icons8-dinheiro-100.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Investindo na Poupança</h1>
+    </header>
+    <section>
+      <p id="aptm">
+        Aportes Mensais
+        <input type="number" name="txtn1" id="txtn1" />
+      </p>
+      <p>
+        Tempo de investimento(em meses)
+        <input type="number" name="txtn2" id="txtn2" />
+      </p>
+      <div id="bnb">
+        <input type="button" value="Calcular" onclick="invest()" id="txtb" />
+      </div>
+
+      <div id="res">Calculando...</div>
+    </section>
+
+    <script>
+      function invest() {
+        var tn1 = document.getElementById("txtn1");
+        var tn2 = document.querySelector("input#txtn2"); //# pq usei o id, se fosse classe era o .
+        var n1 = Number(tn1.value);
+        var n2 = Number(tn2.value);
+        var s = n1 * ((Math.pow(1 + 0.005, n2) - 1) / 0.005);
+        var res = document.getElementById("res");
+        if ((n1 == 0) | (n2 == 0)) {
+          res.innerHTML += `<p>[ERRO] FALTAM DADOS</p>`;
+        } else {
+          res.innerHTML =
+            "Ao final do prazo estabelecido você terá o total de: R$" +
+            s.toFixed(2);
+        }
+      }
+    </script>
+    <footer>
+      <p id="cmr">&copy; GerminaTech</p>
+    </footer>
+  </body>
+</html>
